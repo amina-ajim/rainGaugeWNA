@@ -1,5 +1,5 @@
 import pymysql #pip3 install pymysql
-import requests
+import requests,json
 
 #create a mysql connection
 
