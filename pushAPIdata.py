@@ -13,7 +13,10 @@ api_url = "https://api.openweathermap.org/data/2.5/onecall?lat="+str(x)+"&lon="+
 
 response = requests.get(api_url)
 data = response.content
+current =  data[current]
 print(response.content)
+
+apiData = {"latitude":data[lat],"longitude":data[lon],"temp":current[temp],"wspd":current[wind_speed],"wgust":current[wind_gust],"pressure":current[pressure]}
 
 #create a mysql cursor
 cur=conn.cursor()
