@@ -17,7 +17,7 @@ print(type(data))
 current =  data["current"]
 
 
-apiData = {"latitude":data[lat],"longitude":data[lon],"temp":current[temp],"wspd":current[wind_speed],"wgust":current[wind_gust],"pressure":current[pressure]}
+apiData = {"latitude":data["lat"],"longitude":data["lon"],"temp":current["temp"],"wspd":current["wind_speed"],"wgust":current["wind_gust"],"pressure":current["pressure"]}
 
 #create a mysql cursor
 cur=conn.cursor()
