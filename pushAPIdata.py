@@ -25,7 +25,7 @@ cur=conn.cursor()
 
 #cur.execute("INSERT INTO dailyData(sl no,id, DISTRICT, TALUKNAME, HOBLINAME, Day1) VALUES(%(2)s,%(2015)s,%("KODAGU")s,%("MADIKERI")s,%("GALIBIDU")s,%(0.0)s);",data)
 
-cur.execute("INSERT INTO `weather_data` (`latitude`, `longitude`, `temp`, `wspd`, `wgust`, 'pressure') VALUES (%(lat)s,%(lon)s,%(temp)s,%(wind_speed)s,%(wind_gust)s,%(pressure)s);",data)
+cur.execute("INSERT INTO `weather_data` (`latitude`, `longitude`, `temp`, `wspd`, `wgust`, 'pressure') VALUES (%(lat)s,%(lon)s,%(temp)s,%(wind_speed)s,%(wind_gust)s,%(pressure)s);",apiData)
 
 conn.commit()
 conn.close()
