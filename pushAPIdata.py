@@ -30,7 +30,7 @@ conn =pymysql.connect(database="weather_data_schema",user="landslide",password="
 #create a mysql cursor
 cur=conn.cursor()
 
-cur.execute("INSERT INTO `weather_data` (`latitude`, `longitude`, `temp`, `wspd`, `wgust`) VALUES (%(latitude)s,%(longitude)s,%(temp)s,%(wspd)s,%(wgust)s);",apiData)
+cur.execute("INSERT INTO `weather_data` (`latitude`, `longitude`, `temp`, `wspd`, `wgust`, pressure) VALUES (%(latitude)s,%(longitude)s,%(temp)s,%(wspd)s,%(wgust)s, %(pressure)s);",apiData)
 
 conn.commit()
 conn.close()
