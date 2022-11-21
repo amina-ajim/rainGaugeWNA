@@ -19,8 +19,7 @@ current =  data["current"]
 
 apiData = {"latitude":data["lat"],"longitude":data["lon"],"temp":current["temp"],"wspd":current["wind_speed"],"wgust":current["wind_gust"],"pressure":current["pressure"]}
 
-#create a mysql cursor
-cur=conn.cursor()
+
 
 #data = {"sl no":2,"id":2015,"DISTRICT":"KODAGU","TALUKNAME":"MADIKERI","HOBLINAME":"GALIBIDU","Day1":0.0}
 
@@ -28,6 +27,8 @@ cur=conn.cursor()
 
 conn =pymysql.connect(database="weather_data_schema",user="landslide",password="amma@123",host="localhost")
 
+#create a mysql cursor
+cur=conn.cursor()
 
 cur.execute("INSERT INTO `weather_data` (`latitude`, `longitude`, `temp`, `wspd`, `wgust`, 'pressure') VALUES (%(lat)s,%(lon)s,%(temp)s,%(wind_speed)s,%(wind_gust)s,%(pressure)s);",apiData)
 
