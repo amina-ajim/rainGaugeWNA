@@ -13,7 +13,7 @@ api_url = "https://api.openweathermap.org/data/2.5/onecall?lat="+str(x)+"&lon="+
 response = requests.get(api_url)
 data = json.loads(response.content.decode())
 print(data)
-print(type(data))
+# print(type(data))
 current =  data["current"]
 
 
